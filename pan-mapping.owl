@@ -32,6 +32,68 @@
     
 
 
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/contributor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/ns/prov#Person"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+                                <owl:hasValue rdf:resource="http://www.w3.org/ns/dcat#contributor"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+                        <owl:hasValue rdf:resource="http://purl.org/nexusformat/definitions/NeXusOntology#local_contact"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+                        <owl:hasValue rdf:resource="http://purl.org/nexusformat/definitions/NeXusOntology#principal_investigator"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+                        <owl:hasValue rdf:resource="http://purl.org/nexusformat/definitions/NeXusOntology#proposer"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/ns/prov#Person"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+                                <owl:hasValue rdf:resource="http://www.w3.org/ns/dcat#author"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+                        <owl:hasValue rdf:resource="http://www.w3.org/ns/dcat#coAuthor"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
@@ -310,10 +372,10 @@
 
     <!-- http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-role -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-role">
+    <owl:ObjectProperty rdf:about="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-role">
         <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/dcat#hadRole"/>
         <rdfs:domain rdf:resource="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser"/>
-    </owl:DatatypeProperty>
+    </owl:ObjectProperty>
     
 
 
@@ -334,7 +396,7 @@
 
     <!-- http://www.w3.org/ns/dcat#hadRole -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#hadRole"/>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#hadRole"/>
     
 
 
@@ -394,18 +456,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/contributor"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/creator"/>
     
 
 
@@ -535,22 +585,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/nexusformat/definitions/NeXusOntology#NXentry -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/nexusformat/definitions/NeXusOntology#NXentry">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/nexusformat/definitions/NeXusOntology#NXuser -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    </owl:NamedIndividual>
     
 
 

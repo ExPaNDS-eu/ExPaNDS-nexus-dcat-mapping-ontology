@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://github.com/ExPaNDS-eu/ExPaNDS-nexus-dcat-mapping-ontology/pan-mapping/"
-     xml:base="https://github.com/ExPaNDS-eu/ExPaNDS-nexus-dcat-mapping-ontology/pan-mapping/"
+<rdf:RDF xmlns="http://www.purl.org/pan-science/integration/PaN-mapping/"
+     xml:base="http://www.purl.org/pan-science/integration/PaN-mapping/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:nxs="http://purl.org/nexusformat/definitions/NeXusOntology#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -15,8 +15,27 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="https://github.com/ExPaNDS-eu/ExPaNDS-nexus-dcat-mapping-ontology/pan-mapping/">
-        <owl:versionIRI rdf:resource="https://github.com/ExPaNDS-eu/ExPaNDS-nexus-dcat-mapping-ontology/pan-mapping/0.1/"/>
+    <owl:Ontology rdf:about="http://www.purl.org/pan-science/integration/PaN-mapping/">
+	<dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A. Gonzalez Beltran</dct:creator>
+        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Iyayi</dct:creator>
+        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H. Görzig
+orcid.org/0000-0001-9121-8643</dct:creator>
+        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. P. Collins
+orcid.org/0000-0001-5120-0764</dct:creator>
+        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. Da Graca Ramos</dct:creator>
+        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/publicdomain/zero/1.0/</dct:license>
+	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aligning existing PaN-ontologies
+	
+Purpose
+
+In the PaN-community different ontologies like the NeXus ontology, the CSMD of the ICAT and the PaNET have been created. All these ontologies are having there special usage scenarios nevertheless parts of the used concepts overlap. These concepts need to be related to each other. 
+
+In order to integrate these existing ontologies within the wider EOSC landscape, the existing ontologies need to be integrated  with existing catalogue standards as e.g. DCAT v2.
+
+Caveats
+This ontology is the very first version of integrating these ontologies. Contributers of the related ontologies might have other opinions of the relations and there might be changes in the future.
+	</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://www.purl.org/pan-science/integration/PaN-mapping/0.1/"/>
     </owl:Ontology>
     
 

@@ -16,15 +16,16 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://www.purl.org/pan-science/integration/PaN-mapping/">
-	<dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A. Gonzalez Beltran</dct:creator>
+        <owl:versionIRI rdf:resource="http://www.purl.org/pan-science/integration/PaN-mapping/0.1/"/>
+        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A. Gonzalez Beltran</dct:creator>
         <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D. Iyayi</dct:creator>
         <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H. Görzig
 orcid.org/0000-0001-9121-8643</dct:creator>
+        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. Da Graca Ramos</dct:creator>
         <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. P. Collins
 orcid.org/0000-0001-5120-0764</dct:creator>
-        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S. Da Graca Ramos</dct:creator>
-        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/publicdomain/zero/1.0/</dct:license>
-	<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aligning existing PaN-ontologies
+        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/4.0/</dct:license>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aligning existing PaN-ontologies
 	
 Purpose
 
@@ -35,8 +36,24 @@ In order to integrate these existing ontologies within the wider EOSC landscape,
 Caveats
 This ontology is the very first version of integrating these ontologies. Contributers of the related ontologies might have other opinions of the relations and there might be changes in the future.
 	</rdfs:comment>
-        <owl:versionIRI rdf:resource="http://www.purl.org/pan-science/integration/PaN-mapping/0.1/"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -113,6 +130,15 @@ This ontology is the very first version of integrating these ontologies. Contrib
     
 
 
+    <!-- http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-role -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-role">
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/dcat#hadRole"/>
+        <rdfs:domain rdf:resource="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
@@ -128,6 +154,12 @@ This ontology is the very first version of integrating these ontologies. Contrib
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#hadRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#hadRole"/>
     
 
 
@@ -389,15 +421,6 @@ This ontology is the very first version of integrating these ontologies. Contrib
     
 
 
-    <!-- http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-role -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-role">
-        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/dcat#hadRole"/>
-        <rdfs:domain rdf:resource="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-telephone_number -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/nexusformat/definitions/NeXusOntology#NXuser-telephone_number">
@@ -410,12 +433,6 @@ This ontology is the very first version of integrating these ontologies. Contrib
     <!-- http://www.w3.org/ns/dcat#endDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#endDate"/>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#hadRole -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#hadRole"/>
     
 
 
